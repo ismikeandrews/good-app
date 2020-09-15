@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import styles from './styles'
 
 class Login extends Component{

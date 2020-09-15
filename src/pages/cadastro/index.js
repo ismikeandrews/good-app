@@ -1,17 +1,49 @@
 import React, {Component} from 'react';
 import { View, Text, TextInput, Button } from 'react-native'
-
-
+import { Etapa1, Etapa2, Etapa3 } from './etapas'
+import { Stepper } from '../../shared'
+import styles from './styles'
 class Cadastro extends Component{
 
-    async login(){
+    state = {page: 0, total: 3}
+
+    async register(){
         console.log("Login")
+    }
+
+    currentPage(){
+        if (this.state.page === 0) {
+            return (
+                <Etapa1/>
+            )
+        }
+        if (this.state.page === 1) {
+            return (
+                <Etapa2/>
+            )
+        }
+        if (this.state.page === 2) {
+            return (
+                <Etapa3/>
+            )
+        }
     }
 
     render(){
         return(
-            <View>
-                <Text>Cadastro</Text>
+            <View style={styles.container}>
+                <Stepper total={this.state.total}/>
+                {this.currentPage()}
+                    <Button
+                    title="Próximo"
+                    onPress={() => this.setState({page: this.state.page + 1})}/>
+
+                {this.state.page > 0 ? 
+                    <Button
+                    title="Voltar"
+                    onPress={() => this.setState({page: this.state.page - 1})}/> :
+                    <Text></Text>
+                }
             </View>
         )
     }
