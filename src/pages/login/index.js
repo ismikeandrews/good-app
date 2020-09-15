@@ -26,7 +26,8 @@ class Login extends Component{
                 title="Cadastro"
                 onPress={() => this.props.navigation.navigate('Cadastro')}/>
                 <Button
-                title="Código de cadastro"/>
+                title="Código de cadastro"
+                onPress={() => this.props.navigation.navigate('CadastroCurriculo')}/>
             </View>
         )
     }

@@ -32,12 +32,15 @@ class Cadastro extends Component{
     render(){
         return(
             <View style={styles.container}>
-                <Stepper total={this.state.total}/>
+                <Stepper page={this.state.page} total={this.state.total}/>
                 {this.currentPage()}
+                {this.state.page + 1 === this.state.total ?
+                    <Button
+                    title="Cadastrar"/> :
                     <Button
                     title="Próximo"
                     onPress={() => this.setState({page: this.state.page + 1})}/>
-
+                }
                 {this.state.page > 0 ? 
                     <Button
                     title="Voltar"
