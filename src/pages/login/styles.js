@@ -5,12 +5,11 @@ import font from '../../assets/utils/fonts'
 export default StyleSheet.create({
     logo: {
         alignItems: 'center',
-        width: '100%',
     },
     logoImg: {
         height: 72,
         marginTop: 30,
-        marginBottom: 40,
+        marginBottom: 45,
         width: 100,
     },
     label: {
@@ -18,7 +17,7 @@ export default StyleSheet.create({
     },
     btnLink: {
         alignItems: 'flex-end',
-        marginBottom: 20,
+        marginBottom: 25,
         marginRight: 3,
         marginTop: 10,
     },
@@ -33,7 +32,7 @@ export default StyleSheet.create({
     },
     btnEntrar: {
         backgroundColor: color.pink_light,
-        marginBottom: 30,
+        marginBottom: 35,
     },
     btnCadastro: {
         borderColor: color.dark_red,
