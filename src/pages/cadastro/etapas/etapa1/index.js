@@ -13,18 +13,14 @@ export default function Etapa1(){
                 <Image style={ styles.perfilImg } source={require('../../../../assets/images/ijc.png')} />
             </View>
 
-            <Text>Nome Completo</Text>
-            <TextInput
-                style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                onChangeText={text => onChangeText(text)}/> 
-            <Text>Data de Nascimento</Text>
-            <TextInput
-                style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                onChangeText={text => onChangeText(text)}/> 
-            <Text>Email</Text>
-            <TextInput
-                style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-                onChangeText={text => onChangeText(text)}/>                 
+            <Text style={ styles.label }>Nome completo</Text>
+            <TextInput style={ styles.input } onChangeText={ text => onChangeText(text) }/>
+
+            <Text style={ styles.label }>Email</Text>
+            <TextInput style={ styles.input } onChangeText={ text => onChangeText(text) }/>
+
+            <Text style={ styles.label }>Data de Nascimento</Text>
+            <TextInput style={ styles.input } onChangeText={ text => onChangeText(text) }/>
         </View>
     )
 }

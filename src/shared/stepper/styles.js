@@ -1,16 +1,14 @@
-import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants'
+import { StyleSheet } from 'react-native'
 
 import color from '../../assets/utils/colors'
 import font from '../../assets/utils/fonts'
-import { preventAutoHide } from 'expo/build/launch/SplashScreen';
 
 export default StyleSheet.create({
     stepper: {
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        width: '100%',
+        justifyContent: 'center',
+        marginTop: 50,
     },
     step: {
         borderColor: color.gray,
@@ -20,12 +18,19 @@ export default StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         height: 30,
-        marginTop: 50,
         textAlign: 'center',
         width: 30,
     },
     stepActive: {
         borderColor: color.orange,
         color: color.orange,
+    },
+    bar: {
+        backgroundColor: color.gray,
+        height: 2,
+        width: 70,
+    },
+    barActive: {
+        backgroundColor: color.orange,
     }
 })

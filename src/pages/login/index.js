@@ -20,7 +20,7 @@ class Login extends Component{
             
                 <Text style={ styles.label }>Login</Text>
                 <TextInput style={ styles.input } placeholder = 'Digite seu login'
-                onChangeText={ text => onChangeText(text) }/> 
+                onChangeText={ text => onChangeText(text) }/>
                 
                 <Text style={ styles.label }>Senha</Text>
                 <TextInput style={ styles.input } placeholder='Digite sua senha'

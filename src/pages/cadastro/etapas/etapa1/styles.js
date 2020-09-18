@@ -23,62 +23,23 @@ export default StyleSheet.create({
     },
     perfil: {
         alignItems: 'center',
-        width: '100%',
     },
     perfilImg: {
         height: 72,
-        marginVertical: 40,
+        marginVertical: 30,
         width: 100,
     },
     label: {
         color: color.gray,
-        fontSize: 20,
-        marginBottom: 5,
-        marginTop: 15,
+        fontSize: 18,
+        marginTop: 20,
     },
     input: {
-        backgroundColor: 'white',
-        borderColor: color.gray,
-        borderRadius: 10,
-        borderWidth: 1,
-        color: color.gray,
-        height: 45,
-        paddingLeft: 15,
-    },
-    contentBtn: {
-        alignItems: 'center',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
-    btn: {
-        borderRadius: 30,
-    },
-    btns: {
         backgroundColor: 'transparent',
-        borderWidth: 1,
-        width: '48%',
-    },
-    btnText: {
-        paddingVertical: 10,
-        textAlign: 'center',
-    },
-    btnEntrar: {
-        backgroundColor: color.pink_light,
-        marginVertical: 30,
-    },
-    btnCadastro: {
-        borderColor: color.dark_red,
-    },
-    btnCodigo: {
-        borderColor: color.orange,
-    },
-    btnTextEntrar: {
-        color: color.white,
-    },
-    btnTextCadastro: {
-        color: color.dark_red,
-    },
-    btnTextCodigo: {
-        color: color.orange,
-    },
+        borderColor: color.gray,
+        borderBottomWidth: 1,
+        color: color.gray,
+        fontSize: 18,
+        height: 40,
+    }
 })
