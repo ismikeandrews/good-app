@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, TextInput, Button } from 'react-native'
 
+import variables from '../../../../shared/variables/styles'
+
 export default function Etapa2(){
 
     return (
