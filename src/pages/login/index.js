@@ -26,6 +26,11 @@ class Login extends Component{
                 <TextInput style={ styles.input } placeholder='Digite sua senha'
                 onChangeText={text => onChangeText(text)}/>
                 
+                <TouchableOpacity style={ styles.btnLink }
+                onPress={() => this.props.navigation.navigate('Cadastro')}>
+                    <Text style={ styles.link }>Esqueceu a senha?</Text>
+                </TouchableOpacity>
+
                 <TouchableOpacity style={[ styles.btn, styles.btnEntrar ]}
                 onPress={() => this.login()}>
                     <Text style={[ styles.btnText, styles.btnTextEntrar ]}>Entrar</Text>
@@ -34,7 +39,7 @@ class Login extends Component{
                 <View style={ styles.contentBtn }>
                     <TouchableOpacity style={[ styles.btn, styles.btns, styles.btnCadastro ]}
                     onPress={() => this.props.navigation.navigate('Cadastro')}>
-                        <Text style={[ styles.btnText, styles.btnTextCadastro ]}>Cadastro</Text>
+                        <Text style={[ styles.btnText, styles.btnTextCadastro ]}>Cadastre-se</Text>
                     </TouchableOpacity>
                     
                     <TouchableOpacity style={[ styles.btn, styles.btns, styles.btnCodigo ]}

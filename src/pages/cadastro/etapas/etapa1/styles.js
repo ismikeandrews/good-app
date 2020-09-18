@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants'
 
-import color from '../../assets/utils/colors'
-import font from '../../assets/utils/fonts'
+import color from '../../../../assets/utils/colors'
+import font from '../../../../assets/utils/fonts'
 import { preventAutoHide } from 'expo/build/launch/SplashScreen';
 
 export default StyleSheet.create({
@@ -12,15 +12,6 @@ export default StyleSheet.create({
         paddingHorizontal: 25,
         paddingTop: Constants.statusBarHeight + 30,
     },
-    logo: {
-        alignItems: 'center',
-        width: '100%',
-    },
-    logoImg: {
-        height: 72,
-        marginVertical: 40,
-        width: 100,
-    },
     title: {
         color: color.gray,
         fontSize: 25,
@@ -28,13 +19,22 @@ export default StyleSheet.create({
     subtitle: {
         color: color.gray,
         fontSize: 14,
-        marginBottom: 10,
+        marginBottom: 15,
+    },
+    perfil: {
+        alignItems: 'center',
+        width: '100%',
+    },
+    perfilImg: {
+        height: 72,
+        marginVertical: 40,
+        width: 100,
     },
     label: {
         color: color.gray,
-        fontSize: 18,
+        fontSize: 20,
         marginBottom: 5,
-        marginTop: 10,
+        marginTop: 15,
     },
     input: {
         backgroundColor: 'white',
@@ -46,19 +46,9 @@ export default StyleSheet.create({
         paddingLeft: 15,
     },
     contentBtn: {
-        flexDirection: 'row',
         alignItems: 'center',
+        flexDirection: 'row',
         justifyContent: 'space-between',
-    },
-    btnLink: {
-        alignItems: 'flex-end',
-        marginBottom: 20,
-        marginRight: 3,
-        marginTop: 10,
-    },
-    link: {
-        color: color.pink,
-        textAlign: 'right',
     },
     btn: {
         borderRadius: 30,
@@ -74,7 +64,7 @@ export default StyleSheet.create({
     },
     btnEntrar: {
         backgroundColor: color.pink_light,
-        marginBottom: 30,
+        marginVertical: 30,
     },
     btnCadastro: {
         borderColor: color.dark_red,

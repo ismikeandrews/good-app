@@ -1,13 +1,18 @@
 import React from 'react'
-import { View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, Image } from 'react-native'
+import styles from './styles'
 
 export default function Etapa1(){
 
     return (
         <View>
-            <Text>
-                Informações Pessoais
-            </Text>
+            <Text style={ styles.title }>Informações pessoais</Text>
+            <Text style={ styles.subtitle }>Precisamos de alguns dados básicos sobre você</Text>
+
+            <View style={ styles.perfil }>
+                <Image style={ styles.perfilImg } source={require('../../../../assets/images/ijc.png')} />
+            </View>
+
             <Text>Nome Completo</Text>
             <TextInput
                 style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
