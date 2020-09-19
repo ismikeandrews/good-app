@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native'
 import { Etapa1, Etapa2, Etapa3 } from './etapas'
-import { Stepper } from '../../shared'
+import { Stepper } from '../../shared/'
 
 import variables from '../../shared/variables/styles'
 import styles from './styles'

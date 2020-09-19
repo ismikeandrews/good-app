@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Login, Cadastro , CadastroCurriculo} from './pages'
+import { Login, Cadastro , CadastroCurriculo, Curriculo} from './pages'
 
 const AppStack = createStackNavigator();
 
@@ -13,6 +13,7 @@ export default function Routes(){
                 <AppStack.Screen name="Login" component={Login}/>
                 <AppStack.Screen name="Cadastro" component={Cadastro}/>
                 <AppStack.Screen name="CadastroCurriculo" component={CadastroCurriculo}/>
+                <AppStack.Screen name="Curriculo" component={Curriculo}/>
             </AppStack.Navigator>
         </NavigationContainer>
     );
