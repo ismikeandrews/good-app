@@ -4,24 +4,28 @@ import color from '../../assets/utils/colors'
 export default StyleSheet.create({
     container: {
         alignItems: 'center',
+        bottom: 0,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        position: 'absolute',
     },
     item: {
+        backgroundColor: '#eee',
         alignItems: 'center',
         marginHorizontal: 20,
         marginTop: 20,
+        paddingVertical: 10,
         width: '25%',
     },
     itemIcon: {
-        height: 40,
+        height: 30,
         padding: 10,
-        width: 40,
+        width: 35,
     },
     text: {
         fontSize: 13,
         fontWeight: 'bold',
-        marginTop: 10,
+        marginTop: 5,
     },
     textPink: {
         color: color.pink_light

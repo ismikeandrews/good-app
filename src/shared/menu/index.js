@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native'
 
-import variables from '../../shared/variables/styles'
 import styles from './styles'
 
 export default function Menu(){

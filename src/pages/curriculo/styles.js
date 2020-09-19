@@ -6,9 +6,15 @@ export default StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
+        paddingBottom: 20,
+    },
+    icon: {
+        height: 60,
+        marginBottom: 20,
+        width: 60,
     },
     text: {
-        color: color.dark_red,
+        color: color.pink,
         fontSize: 18,
         marginBottom: 20
     },
