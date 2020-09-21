@@ -1,12 +1,63 @@
-import React, { Component } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native'
+import React, {Component} from 'react';
+import { View, Text, TouchableOpacity } from 'react-native'
+import { Etapa1, Etapa2, Etapa3, Etapa4 } from './etapas'
+import { Stepper, Menu } from '../../shared/'
+
+import variables from '../../shared/variables/styles'
+import styles from './styles'
+
 class CadastroCurriculo extends Component{
+
+    state = {page: 0, total: 4}
+
+    currentPage(){
+        if (this.state.page === 0) {
+            return (
+                <Etapa1/>
+            )
+        }
+        if (this.state.page === 1) {
+            return (
+                <Etapa2/>
+            )
+        }
+        if (this.state.page === 2) {
+            return (
+                <Etapa3/>
+            )
+        }
+        if (this.state.page === 3) {
+            return (
+                <Etapa4/>
+            )
+        }
+    }
+
     render(){
         return(
-            <View>
-                <Text>
-                    Teste Curriculo
-                </Text>
+            <View style={ styles.container }>
+                <Stepper page={this.state.page} total={this.state.total}/>
+
+                {this.currentPage()}
+
+                <View style={[ variables.contentBtn, styles.contentBtn ]}>
+                    {this.state.page + 1 === this.state.total ?
+                        <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnCadastrar ]}>
+                            <Text style={[ variables.btnText, styles.btnText ]}>Cadastrar</Text>
+                        </TouchableOpacity> :
+                        <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnNext ]} onPress={() => this.setState({page: this.state.page + 1})}>
+                            <Text style={[ variables.btnText, styles.btnText ]}>Próximo</Text>
+                        </TouchableOpacity>
+                    }
+                    {this.state.page > 0 ? 
+                        <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnPrev ]} onPress={() => this.setState({page: this.state.page - 1})}>
+                            <Text style={[ variables.btnText, styles.btnText ]}>Voltar</Text>
+                        </TouchableOpacity> :
+                        null
+                    }
+                </View>
+                
+                <Menu/>
             </View>
         )
     }

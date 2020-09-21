@@ -12,8 +12,8 @@ export default function Routes(){
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Login" component={Login}/>
                 <AppStack.Screen name="Cadastro" component={Cadastro}/>
-                <AppStack.Screen name="CadastroCurriculo" component={CadastroCurriculo}/>
                 <AppStack.Screen name="Curriculo" component={Curriculo}/>
+                <AppStack.Screen name="CadastroCurriculo" component={CadastroCurriculo}/>
             </AppStack.Navigator>
         </NavigationContainer>
     );

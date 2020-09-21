@@ -13,7 +13,8 @@ class Curriculo extends Component{
 
                 <Text style={ styles.text }>Cadastre um currículo para continuar</Text>
 
-                <TouchableOpacity style={[ variables.btn, styles.btn ]}>
+                <TouchableOpacity style={[ variables.btn, styles.btn ]}
+                onPress={() => this.props.navigation.navigate('CadastroCurriculo')}>
                     <Text style={[ variables.btnText, styles.btnText ]}>Cadastrar</Text>
                 </TouchableOpacity>
                 
