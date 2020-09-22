@@ -1,7 +1,7 @@
-import react from 'react'
 import React from 'react'
 import { View, Text, TextInput, Image } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import ImagePicker from 'react-native-image-picker';
 
 import variables from '../../../../shared/variables/styles'
 import styles from './styles'
@@ -12,6 +12,36 @@ class Etapa1 extends React.Component {
         tabs: true
     }
     
+    chooseMedia(){
+
+        const options = {
+            title: 'Selecione uma foto',
+            cancelButtonTitle: 'Cancelar',
+            takePhotoButtonTitle: 'Abrir a câmera',
+            chooseFromLibraryButtonTitle: 'Escolher da galeria',
+            cameraType: 'front',
+            mediaType: 'photo',
+            maxWidth: 2000,
+            maxHeight: 2000,
+            storageOptions: {
+                skipBackup: true,
+                path: 'images',
+            },
+        };
+
+        ImagePicker.showImagePicker(options, (response) => {
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            } else if (response.customButton) {
+                console.log('User tapped custom button: ', response.customButton);
+            } else {
+               console.log(response)
+            }
+        });
+    }
+
     render(){
         return (
             <View>
@@ -30,7 +60,11 @@ class Etapa1 extends React.Component {
         
                 <View style={ styles.desc }>
                     {this.state.tabs === true ?
-                        <TextInput style={ styles.textarea } placeholder={ 'Vídeo sobre você' } onChangeText={text => onChangeText(text)} />
+                        <View>
+                            <TouchableOpacity onPress={() => this.chooseMedia()}>
+                            </TouchableOpacity>
+                            <TextInput style={ styles.textarea } placeholder={ 'Vídeo sobre você' } onChangeText={text => onChangeText(text)} />
+                        </View>
                         :
                         <TextInput style={ styles.textarea } placeholder={ 'Escreva uma breve descrição sobre você' } onChangeText={text => onChangeText(text)} />
                     }
