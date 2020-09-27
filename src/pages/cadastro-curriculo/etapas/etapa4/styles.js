@@ -1,16 +1,44 @@
 import { StyleSheet } from 'react-native';
+import color from '../../../../assets/utils/colors'
 
 export default StyleSheet.create({
-    title: {
-        marginBottom: 10
+    content: {
+        marginVertical: 30,
+        width: '95%'
     },
-    inputGrid: {
+    container: {
         alignItems: 'center',
         flexDirection: 'row',
-        justifyContent: 'center',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
     },
-    input: {
-        width: '48%',
-        marginHorizontal: 5,
+    checkbox: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 20,
+    },
+    item: {
+        alignItems: 'center',
+        borderColor: color.gray,
+        borderRadius: 5,
+        borderWidth: 3,
+        paddingBottom: 10,
+        paddingTop: 20,
+        paddingHorizontal: 40,
+    },
+    itemActive: {
+        backgroundColor: '#ec377c40',
+        borderColor: color.pink_light,
+    },
+    image: {
+        height: 60,
+        marginBottom: 20,
+        paddingBottom: 10,
+        width: 60,
+    },
+    label: {
+        color: color.gray,
+        fontSize: 18,
+        textAlign: 'center',
     }
 })
