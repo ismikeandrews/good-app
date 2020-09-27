@@ -2,6 +2,9 @@ import { StyleSheet } from 'react-native';
 import color from '../../../../assets/utils/colors'
 
 export default StyleSheet.create({
+    content: {
+        marginTop: 20
+    },
     container: {
         alignItems: 'center',
         flexDirection: 'column',

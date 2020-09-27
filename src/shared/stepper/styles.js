@@ -8,7 +8,6 @@ export default StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'center',
-        marginTop: 50,
     },
     step: {
         borderColor: color.gray,
@@ -28,7 +27,7 @@ export default StyleSheet.create({
     bar: {
         backgroundColor: color.gray,
         height: 2,
-        width: 70,
+        width: 40,
     },
     barActive: {
         backgroundColor: color.orange,

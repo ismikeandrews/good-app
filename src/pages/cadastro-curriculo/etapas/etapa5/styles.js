@@ -1,9 +1,6 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-    content: {
-        marginBottom: 30,
-    },
     title: {
         marginBottom: 10
     },

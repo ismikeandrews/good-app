@@ -1,24 +1,38 @@
-import React from 'react'
-import { View, Text, TextInput, Button } from 'react-native'
+import React, {Component} from 'react';
+import { View, Text, TouchableOpacity, Image } from 'react-native'
 
 import variables from '../../../../shared/variables/styles'
 import styles from './styles'
 
-export default function Etapa2(){
+class Etapa2 extends React.Component {
+    
+    state = {
+        active: false
+    }
 
-    return (
-        <View style={ styles.content }>
-            <Text style={ variables.title }>Informações da Conta</Text>
-            <Text style={ variables.subtitle }>Agora vamos configurar a sua conta</Text>
-
-            <Text style={ variables.label }>Login</Text>
-            <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-
-            <Text style={ variables.label }>Senha</Text>
-            <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-
-            <Text style={ variables.label }>Confirmar senha</Text>
-            <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-        </View>
-    )
+    render() {
+        return (
+            <View style={ styles.content }>
+                <Text style={ variables.title }>Requisitos</Text>
+                <Text style={ variables.subtitle }>Formações básicas em...</Text>
+    
+                <TouchableOpacity style={ styles.select }
+                onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
+                    {this.state.active === false ?
+                        <View style={ styles.selectItem }>
+                                <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
+                                <Text style={ styles.label }>Escolaridade</Text>
+                        </View>
+                        :
+                        <View style={ styles.selectItem }>
+                                <Text style={ styles.label }>Escolaridade</Text>
+                                <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
+                        </View>
+                    }
+                </TouchableOpacity>
+            </View>
+        )
+    }
 }
+
+export {Etapa2}

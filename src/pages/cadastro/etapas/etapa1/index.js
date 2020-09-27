@@ -7,7 +7,7 @@ import styles from './styles'
 export default function Etapa1(){
 
     return (
-        <View>
+        <View style={ styles.content }>
             <Text style={ variables.title }>Informações pessoais</Text>
             <Text style={ variables.subtitle }>Precisamos de alguns dados básicos sobre você</Text>
 

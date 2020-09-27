@@ -7,14 +7,26 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         height: '100%',
-        paddingBottom: 50,
-        paddingHorizontal: 30,
+        paddingBottom: 40,
+        paddingHorizontal: 20,
+    },
+    contentBtn: {
+        flexDirection: 'row-reverse'
     },
     btn: {
-        backgroundColor: color.pink_light,
+        marginHorizontal: 5,
         width: '48%',
     },
     btnText: {
         color: color.white,
+    },
+    btnPrev: {
+        backgroundColor: color.dark_red,
+    },
+    btnNext: {
+        backgroundColor: color.pink_light,
+    },
+    btnCadastrar: {
+        backgroundColor: color.orange,
     },
 })

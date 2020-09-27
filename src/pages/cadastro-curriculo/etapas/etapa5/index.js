@@ -7,7 +7,7 @@ import styles from './styles'
 export default function Etapa3(){
 
     return (
-        <View style={[ variables.content, styles.content ]}>
+        <View style={ variables.content }>
             <Text style={[ variables.title, styles.title ]}>Endereço</Text>
 
             <Text style={ variables.label }>CEP</Text>

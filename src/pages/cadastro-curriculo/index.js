@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View, Text, TouchableOpacity } from 'react-native'
-import { Etapa1, Etapa2, Etapa3, Etapa4 } from './etapas'
+import { Etapa1, Etapa2, Etapa3, Etapa4, Etapa5 } from './etapas'
 import { Stepper, Menu } from '../../shared/'
 
 import variables from '../../shared/variables/styles'
@@ -8,7 +8,7 @@ import styles from './styles'
 
 class CadastroCurriculo extends Component{
 
-    state = {page: 0, total: 4}
+    state = {page: 0, total: 5}
 
     currentPage(){
         if (this.state.page === 0) {
@@ -29,6 +29,11 @@ class CadastroCurriculo extends Component{
         if (this.state.page === 3) {
             return (
                 <Etapa4/>
+            )
+        }
+        if (this.state.page === 4) {
+            return (
+                <Etapa5/>
             )
         }
     }
