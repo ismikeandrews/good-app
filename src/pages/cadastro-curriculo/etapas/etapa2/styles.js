@@ -3,21 +3,22 @@ import color from '../../../../assets/utils/colors'
 
 export default StyleSheet.create({
     content: {
-        marginVertical: 40,
+        marginVertical: 30,
         width: '95%'
     },
     select: {
         alignItems: 'center',
         justifyContent: 'center',
+        marginTop: 20,
     },
     selectItem: {
+        alignItems: 'center',
+        borderColor: color.gray,
         borderRadius: 5,
         borderWidth: 2,
-        borderColor: color.gray,
-        alignItems: 'center',
         paddingBottom: 10,
         paddingTop: 20,
-        width: 230,
+        width: 270,
         
     },
     image: {
@@ -30,5 +31,23 @@ export default StyleSheet.create({
         color: color.gray,
         fontSize: 18,
         textAlign: 'center',
+    },
+    list: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    listContent: {
+        borderColor: color.gray,
+        borderRadius: 5,
+        borderTopWidth: 0,
+        borderWidth: 2,
+        marginTop: -3,
+        paddingVertical: 10,
+        paddingLeft: 10,
+        width: 270,
+    },
+    itemText: {
+        fontSize: 15,
+        marginVertical: 7,
     },
 })
