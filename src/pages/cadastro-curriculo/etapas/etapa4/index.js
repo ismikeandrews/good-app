@@ -1,15 +1,11 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { Checkbox } from '../../../../shared'
 
 import variables from '../../../../shared/variables/styles'
 import styles from './styles'
 
 class Etapa4 extends React.Component {
-    
-    state = {
-        active: false,
-        habilidades: '',
-    }
     
     render() {
           return (
@@ -18,34 +14,10 @@ class Etapa4 extends React.Component {
                 <Text style={ variables.subtitle }>Eu sou bom com...</Text>
 
                 <View style={ styles.container }>
-                    <TouchableOpacity style={ styles.checkbox }
-                    onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
-                        <View style={this.state.active === false ? styles.item : [styles.item, styles.itemActive]}>
-                            <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
-                            <Text style={ styles.label }>Artes</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.checkbox }
-                    onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
-                        <View style={this.state.active === false ? styles.item : [styles.item, styles.itemActive]}>
-                            <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
-                            <Text style={ styles.label }>Artes</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={ styles.checkbox }
-                    onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
-                        <View style={this.state.active === false ? styles.item : [styles.item, styles.itemActive]}>
-                            <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
-                            <Text style={ styles.label }>Artes</Text>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.checkbox }
-                    onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
-                        <View style={this.state.active === false ? styles.item : [styles.item, styles.itemActive]}>
-                            <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
-                            <Text style={ styles.label }>Artes</Text>
-                        </View>
-                    </TouchableOpacity>
+                    <Checkbox name="Artes"></Checkbox>
+                    <Checkbox name="Contas"></Checkbox>
+                    <Checkbox name="Crianças"></Checkbox>
+                    <Checkbox name="Códigos"></Checkbox>
                 </View>
             </View>
         )
