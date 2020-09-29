@@ -14,10 +14,10 @@ class Etapa4 extends React.Component {
                 <Text style={ variables.subtitle }>Eu sou bom com...</Text>
 
                 <View style={ styles.container }>
-                    <Checkbox name="Artes"></Checkbox>
-                    <Checkbox name="Contas"></Checkbox>
-                    <Checkbox name="Crianças"></Checkbox>
-                    <Checkbox name="Códigos"></Checkbox>
+                    <Checkbox name="Artes" img='ijc.png'></Checkbox>
+                    <Checkbox name="Contas" img='ijc.png'></Checkbox>
+                    <Checkbox name="Crianças" img='ijc.png'></Checkbox>
+                    <Checkbox name="Códigos" img='ijc.png'></Checkbox>
                 </View>
             </View>
         )
