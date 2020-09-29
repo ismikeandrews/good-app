@@ -18,7 +18,7 @@ class Etapa2 extends React.Component {
                 <Text style={ variables.subtitle }>Formações básicas em...</Text>
     
                 <TouchableOpacity style={ styles.select }
-                onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
+                onPress={() => {this.setState({ active : ! this.state.active })}}>
                     <View style={ styles.selectItem }>
                             <Image style={ styles.image } source={require('../../../../assets/images/ijc.png')} />
                             <Text style={ styles.label }>{this.state.school}</Text>

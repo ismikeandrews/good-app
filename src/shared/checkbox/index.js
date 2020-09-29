@@ -9,15 +9,11 @@ class Checkbox extends React.Component {
     }
 
     render() {
-        return (
-            // <View style={ styles.stepper }>
-            //     {checkTotal()}
-            // </View>
-    
+        return (    
             <TouchableOpacity style={ styles.checkbox }
-            onPress={() => {this.state.active === false ? this.setState({ active: true }) : this.setState({ active: false })}}>
+            onPress={() => {this.setState({ active : ! this.state.active })}}>
                 <View style={this.state.active === false ? styles.item : [styles.item, styles.itemActive]}>
-                    <Image style={ styles.image } source={`../../assets/image/${this.props.img}`} />
+                    <Image style={ styles.image } source={`../../assets/images/${this.props.img}`} />
                     <Text style={ styles.label }>{this.props.name}</Text>
                 </View>
             </TouchableOpacity>
