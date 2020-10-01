@@ -15,7 +15,6 @@ export default StyleSheet.create({
         position: 'relative',
     },
     title: {
-        fontWeight: 'bold',
         marginTop: 20,
     },
     tabs: {

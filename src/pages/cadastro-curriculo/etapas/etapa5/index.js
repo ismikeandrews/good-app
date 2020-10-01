@@ -1,56 +1,31 @@
 import React from 'react'
-import { View, Text, TextInput, Button } from 'react-native'
+import { View, Text } from 'react-native'
+import { Checkbox } from '../../../../shared'
 
 import variables from '../../../../shared/variables/styles'
 import styles from './styles'
 
-export default function Etapa3(){
+class Etapa5 extends React.Component {
+    
+    render() {
+          return (
+            <View style={ styles.container }>
+                <Text style={ variables.title }>Objetivo profissional</Text>
+                <Text style={ variables.subtitle }>Eu quero trabalhar com...</Text>
 
-    return (
-        <View style={ variables.content }>
-            <Text style={[ variables.title, styles.title ]}>Endereço</Text>
-
-            <Text style={ variables.label }>CEP</Text>
-            <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-
-            <Text style={ variables.label }>Logradouro</Text>
-            <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-
-            <View style={ styles.inputGrid }>
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Cidade</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                </View>
-
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Bairro</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
+                <View style={ styles.content }>
+                    <Checkbox name="Alimentos" img='ijc.png'></Checkbox>
+                    <Checkbox name="Marketing" img='ijc.png'></Checkbox>
+                    <Checkbox name="Tecnologia" img='ijc.png'></Checkbox>
+                    <Checkbox name="Vendas" img='ijc.png'></Checkbox>
+                    <Checkbox name="Alimentos" img='ijc.png'></Checkbox>
+                    <Checkbox name="Marketing" img='ijc.png'></Checkbox>
+                    <Checkbox name="Tecnologia" img='ijc.png'></Checkbox>
+                    <Checkbox name="Vendas" img='ijc.png'></Checkbox>
                 </View>
             </View>
-
-            <View style={ styles.inputGrid }>
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Estado</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                </View>
-
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Zona</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                </View>
-            </View>
-
-            <View style={ styles.inputGrid }>
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Número</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                </View>
-
-                <View style={ styles.input }>
-                    <Text style={ variables.label }>Complemento</Text>
-                    <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                </View>
-            </View>
-        </View>
-    )
+        )
+    }  
 }
+
+export {Etapa5}

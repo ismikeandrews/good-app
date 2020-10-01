@@ -1,12 +1,11 @@
 import { StyleSheet } from 'react-native';
-import color from '../../../../assets/utils/colors'
 
 export default StyleSheet.create({
-    content: {
-        marginVertical: 30,
-        width: '95%'
-    },
     container: {
+        marginHorizontal: 5,
+        marginVertical: 20,
+    },
+    content: {
         alignItems: 'center',
         flexDirection: 'row',
         flexWrap: 'wrap',

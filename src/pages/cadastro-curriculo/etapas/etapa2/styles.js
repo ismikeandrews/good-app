@@ -5,7 +5,6 @@ import color from '../../../../assets/utils/colors'
 export default StyleSheet.create({
     content: {
         marginVertical: 30,
-        width: '95%'
     },
     select: {
         alignItems: 'center',

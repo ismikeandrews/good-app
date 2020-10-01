@@ -1,20 +1,23 @@
 import { StyleSheet } from 'react-native';
 import color from '../../assets/utils/colors'
+import Constants from 'expo-constants'
 
 export default StyleSheet.create({
     container: {
         alignItems: 'center',
+        flex: 1,
         flexDirection: 'column',
         justifyContent: 'center',
-        height: '100%',
-        paddingBottom: 40,
+        marginTop: Constants.statusBarHeight+50,
+        paddingBottom: Constants.statusBarHeight+50,
         paddingHorizontal: 20,
     },
     contentBtn: {
-        flexDirection: 'row-reverse'
+        flexDirection: 'row-reverse',
+        justifyContent: 'space-between',
+        marginBottom: 30,
     },
     btn: {
-        marginHorizontal: 5,
         width: '48%',
     },
     btnText: {
