@@ -1,53 +1,57 @@
 import { StyleSheet } from 'react-native';
 import color from '../../../../assets/utils/colors'
-// import Constants from 'expo-constants'
+import Constants from 'expo-constants'
 
 export default StyleSheet.create({
-    content: {
+    container: {
         marginVertical: 30,
+        minHeight: Constants.statusBarHeight+350,
     },
-    select: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginTop: 20,
+    content: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: Constants.statusBarHeight+100,
     },
-    selectItem: {
+    yes: {
+        marginTop: 20
+    },
+    btn: {
         alignItems: 'center',
         borderColor: color.gray,
         borderRadius: 5,
         borderWidth: 2,
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
         paddingBottom: 10,
-        paddingTop: 20,
-        width: 270,
-        
+        paddingTop: 10,
+        width: '48%',
     },
-    image: {
-        height: 60,
-        marginBottom: 20,
+    btnActive: {
+        backgroundColor: '#ec377c40',
+        borderColor: color.pink_light,
+    },
+    icon: {
+        height: 30,
+        marginBottom: 0,
         paddingBottom: 10,
-        width: 60,
+        width: 40,
     },
     label: {
         color: color.gray,
         fontSize: 18,
         textAlign: 'center',
     },
-    list: {
-        alignItems: 'center',
-        justifyContent: 'center',
+    form: {
+        marginTop: 20,
     },
-    listContent: {
-        borderColor: color.gray,
-        borderRadius: 5,
-        borderTopWidth: 0,
-        borderWidth: 2,
-        marginTop: -3,
-        paddingVertical: 10,
-        paddingLeft: 10,
-        width: 270,
+    formContent: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
-    itemText: {
-        fontSize: 15,
-        marginVertical: 7,
+    formItem: {
+        width: '48%',
+    },
+    formName: {
+        width: '100%',
     },
 })
