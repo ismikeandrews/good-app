@@ -19,7 +19,6 @@ export default StyleSheet.create({
         paddingBottom: 10,
         paddingTop: 20,
         width: 270,
-        
     },
     image: {
         height: 60,

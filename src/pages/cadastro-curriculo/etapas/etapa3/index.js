@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native'
-import { DescriptionBox } from '../../../../shared/description-box'
+import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { Xp } from '../../../../shared'
 
 import variables from '../../../../shared/variables/styles'
 import styles from './styles'
@@ -10,6 +10,24 @@ class Etapa3 extends React.Component {
     state = {
         no: false,
         yes: false,
+        accordion: false,
+        new: [],
+    }
+
+    newAccordion() {
+        let xp = []
+        xp.push(
+            <>
+                <TouchableOpacity style={[ this.state.accordion === false ? styles.accordion : [styles.accordion, styles.accordionActive] ]}
+                onPress={() => this.setState({ accordion : ! this.state.accordion })}>
+                    <Text style={ styles.accordionTitle }>Experiência</Text>
+                </TouchableOpacity>
+                <View style={[ this.state.accordion === false ? styles.xp : styles.xpActive ]}>
+                    <Xp></Xp>
+                </View>
+            </>
+        )
+        this.setState({ new: xp })
     }
 
     render() {
@@ -33,42 +51,13 @@ class Etapa3 extends React.Component {
                 </View>
                 
                 { this.state.yes === true ?
-                    <View style={ styles.form }>
-                        <View style={ styles.formContent }>
-                            <View style={ styles.formName }>
-                                <Text style={ variables.label }>Nome da empresa</Text>
-                                <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                            </View>
-                        </View>
-
-                        <View style={ styles.formContent }>
-                            <View style={ styles.formItem }>
-                                <Text style={ variables.label }>Área</Text>
-                                <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                            </View>
-                                
-                            <View style={ styles.formItem }>
-                                <Text style={ variables.label }>Cargo</Text>
-                                <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                            </View>
-                        </View>
-
-                        <View style={ styles.formContent }>
-                            <View style={ styles.formItem }>
-                                <Text style={ variables.label }>Data de início</Text>
-                                <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                            </View>
-                                
-                            <View style={ styles.formItem }>
-                                <Text style={ variables.label }>Data de término</Text>
-                                <TextInput style={ variables.input } onChangeText={ text => onChangeText(text) }/>
-                            </View>
-                        </View>
-
-                        <Text style={ variables.label }>Sobre o emprego</Text>
-                        <DescriptionBox placeholder='Escreva uma breve descrição sobre seu emprego e suas experiências'></DescriptionBox>
+                    <View>
+                        { this.state.new }
+                        <TouchableOpacity style={ styles.accordion } onPress={() => this.newAccordion()}>
+                            <Text style={[ styles.accordionTitle, styles.newTitle ]}>+</Text>
+                        </TouchableOpacity>
                     </View>
-                    :
+                :
                     null
                 }
             </View>

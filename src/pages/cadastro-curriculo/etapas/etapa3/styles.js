@@ -41,17 +41,33 @@ export default StyleSheet.create({
         fontSize: 18,
         textAlign: 'center',
     },
-    form: {
+    accordion: {
+        borderColor: color.gray,
+        borderRadius: 5,
+        borderWidth: 1,
         marginTop: 20,
     },
-    formContent: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+    accordionTitle: {
+        color: color.gray,
+        fontSize: 18,
+        marginLeft: 10,
+        paddingVertical: 10,
+        textAlign: 'left',
     },
-    formItem: {
-        width: '48%',
+    newTitle: {
+        paddingVertical: 5,
+        textAlign: 'center',
     },
-    formName: {
-        width: '100%',
+    xp: {
+        display: 'none'
+    },
+    xpActive: {
+        borderColor: color.gray,
+        borderRadius: 5,
+        borderTopWidth: 0,
+        borderWidth: 1,
+        display: 'flex',
+        marginTop: -3,
+        paddingHorizontal: 10,
     },
 })
