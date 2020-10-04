@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native'
+import { View, Text, TouchableOpacity, Image, Alert } from 'react-native'
 import { Xp } from '../../../../shared'
 
 import variables from '../../../../shared/variables/styles'
@@ -11,23 +11,35 @@ class Etapa3 extends React.Component {
         no: false,
         yes: false,
         accordion: false,
-        new: [],
+        new: []
     }
 
-    newAccordion() {
-        let xp = []
-        xp.push(
-            <>
-                <TouchableOpacity style={[ this.state.accordion === false ? styles.accordion : [styles.accordion, styles.accordionActive] ]}
-                onPress={() => this.setState({ accordion : ! this.state.accordion })}>
-                    <Text style={ styles.accordionTitle }>Experiência</Text>
-                </TouchableOpacity>
-                <View style={[ this.state.accordion === false ? styles.xp : styles.xpActive ]}>
-                    <Xp></Xp>
+    newAccordion(){
+         let xp = this.state.new;
+         if(xp.length <= 6){
+            xp.push(
+                <View>
+                    <TouchableOpacity style={[ this.state.accordion === false ? styles.accordion : [styles.accordion, styles.accordionActive] ]}
+                    onPress={() => this.setState({ accordion : ! this.state.accordion })}>
+                        <Text style={ styles.accordionTitle }>Experiência</Text>
+                    </TouchableOpacity>
+                    <View style={[ this.state.accordion === false ? styles.xp : styles.xpActive ]}>
+                        <Xp></Xp>
+                    </View>
                 </View>
-            </>
-        )
-        this.setState({ new: xp })
+            )
+            this.setState({new: xp})
+         }  else {
+            Alert.alert(
+                "Alerta",
+                "Não é possivel criar mais campos",
+                [
+                  { text: "OK", onPress: () => console.log("Ok") }
+                ],
+                { cancelable: false }
+              );
+         }
+         
     }
 
     render() {
@@ -52,7 +64,7 @@ class Etapa3 extends React.Component {
                 
                 { this.state.yes === true ?
                     <View>
-                        { this.state.new }
+                        {this.state.new.map(teste => teste)}
                         <TouchableOpacity style={ styles.accordion } onPress={() => this.newAccordion()}>
                             <Text style={[ styles.accordionTitle, styles.newTitle ]}>+</Text>
                         </TouchableOpacity>
