@@ -43,13 +43,12 @@ class CadastroCurriculo extends Component{
             <SafeAreaView style={styles.container}>
                 <Stepper page={this.state.page} total={this.state.total}/>
                     <ScrollView style={styles.scrollView}>
-                    {/* <View style={ styles.container }> */}
 
                         {this.currentPage()}
 
                         <View style={[ variables.contentBtn, styles.contentBtn ]}>
                             {this.state.page + 1 === this.state.total ?
-                                <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnCadastrar ]}>
+                                <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnCadastrar ]} onPress={() => this.props.navigation.navigate('Vagas') }>
                                     <Text style={[ variables.btnText, styles.btnText ]}>Cadastrar</Text>
                                 </TouchableOpacity> :
                                 <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnNext ]} onPress={() => this.setState({page: this.state.page + 1})}>
@@ -64,7 +63,6 @@ class CadastroCurriculo extends Component{
                             }
                         </View>
                         
-                    {/* </View> */}
                     </ScrollView>
                 <Menu/>
             </SafeAreaView>
