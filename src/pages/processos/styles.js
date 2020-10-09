@@ -62,11 +62,13 @@ export default StyleSheet.create({
     vagaItem: {
         alignItems: 'center',
         backgroundColor: '#fff',
+        borderRadius: 10,
         flexDirection: 'row',
         marginVertical: 10,
         paddingBottom: 10,
         paddingTop: 15,
         paddingHorizontal: 20,
+        maxWidth: '100%',
     },
     desc: {
         alignItems: 'flex-start',
@@ -109,5 +111,26 @@ export default StyleSheet.create({
         color: '#A2A2A2',
         fontSize: 14,
         fontWeight: '700',
+    },
+    vagaEmpty: {
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        paddingVertical: 70,
+    },
+    message: {
+        color: color.dark_red,
+        marginVertical: 20,
+        paddingHorizontal: 15,
+    },
+    btn: {
+        backgroundColor: color.dark_red,
+        marginVertical: 10,
+        paddingHorizontal: 17,
+    },
+    btnText: {
+        color: color.white,
+        fontWeight: '700',
+        textTransform: 'uppercase',
     },
 })

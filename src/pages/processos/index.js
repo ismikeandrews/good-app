@@ -65,18 +65,29 @@ class Processos extends Component{
                                     </View>
                                 </View>
                             </TouchableOpacity>
-                        </View>
-
-                        {/* <View style={[ variables.container, styles.container, styles.view ]}>
+        
+                            {/* Página vazia, necessário vagas */}
+                            {/* <View style={ styles.vagaEmpty }>
                                 <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
-                                <Text style={ styles.text }>Cadastre um currículo para continuar</Text>
+                                <Text style={[ styles.text, styles.message ]}>Não há nenhum processo ocorrendo no momento</Text>
+                                <TouchableOpacity style={[ variables.btn, styles.btn ]}
+                                onPress={() => this.props.navigation.navigate('Vagas')}>
+                                    <Text style={[ variables.btnText, styles.btnText ]}>Selecione uma vaga</Text>
+                                </TouchableOpacity>
+                            </View> */}
+
+                            {/* Página vazia, necessário currículo */}
+                            {/* <View style={ styles.vagaEmpty }>
+                                <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
+                                <Text style={[ styles.text, styles.message ]}>Para continuar cadastre um currículo</Text>
                                 <TouchableOpacity style={[ variables.btn, styles.btn ]}
                                 onPress={() => this.props.navigation.navigate('CadastroCurriculo')}>
-                                    <Text style={[ variables.btnText, styles.btnText ]}>Cadastrar</Text>
+                                    <Text style={[ variables.btnText, styles.btnText ]}>Cadastro do currículo</Text>
                                 </TouchableOpacity>
+                            </View> */}
         
-                            <Menu/>
-                        </View> */}
+                        </View>
+
                     </ScrollView>
 
                     <Menu/>
