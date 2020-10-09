@@ -25,8 +25,9 @@ export default StyleSheet.create({
         maxWidth: 170,
     },
     text: {
-        marginBottom: 10,
+        color: '#6b6b6b',
         fontSize: 18,
+        marginBottom: 10,
         textAlign: 'center',
     },
     title: {

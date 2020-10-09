@@ -1,36 +1,113 @@
 import { StyleSheet } from 'react-native';
 import color from '../../assets/utils/colors'
+import Constants from 'expo-constants'
 
 export default StyleSheet.create({
     container: {
-        alignItems: 'center',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        paddingBottom: 20,
+        flex: 1,
+        marginTop: Constants.statusBarHeight+40,
     },
-    logo: {
+    content: {
         alignItems: 'center',
-    },
-    logoImg: {
-        height: 72,
-        marginTop: 30,
-        marginBottom: 45,
-        width: 100,
+        flex: 1,
+        paddingBottom: Constants.statusBarHeight+60,
+        paddingHorizontal: 20,
     },
     text: {
-        color: color.pink,
+        color: '#6b6b6b',
         fontSize: 18,
-        marginBottom: 20,
-        paddingHorizontal: 5,
         textAlign: 'center',
     },
-    btn: {
-        backgroundColor: color.pink_light,
-        paddingHorizontal: 17,
-    },
-    btnText: {
-        color: color.white,
+    title: {
+        color: '#6b6b6b',
+        fontSize: 20,
         fontWeight: '700',
-        textTransform: 'uppercase',
+        marginBottom: 10,
+        paddingHorizontal: 20,
+        textAlign: 'left',
+    },
+    subtitle: {
+        color: '#A2A2A2',
+        marginBottom: 20,
+        paddingHorizontal: 20,
+        textAlign: 'left',
+    },
+    tabs: {
+        flexDirection: 'row',
+        marginBottom: 15,
+        marginTop: 5,
+    },
+    tabItem: {
+        alignItems: 'center',
+        borderBottomWidth: 4,
+        width: '25%',
+    },
+    tabAll: {
+        borderColor: color.pink_light,
+    },
+    tabAprovado: {
+        borderColor: '#63DE9A',
+    },
+    tabAndamento: {
+        borderColor: '#f7d07a',
+    },
+    tabReprovado: {
+        borderColor: '#F06A47',
+    },
+    icon: {
+        height: 30,
+        marginBottom: 10,
+        width: 30,
+    },
+    vagaItem: {
+        alignItems: 'center',
+        backgroundColor: '#fff',
+        flexDirection: 'row',
+        marginVertical: 10,
+        paddingBottom: 10,
+        paddingTop: 15,
+        paddingHorizontal: 20,
+    },
+    desc: {
+        alignItems: 'flex-start',
+        marginLeft: 20,
+    },
+    logo: {
+        height: 50,
+        maxWidth: 50,
+    },
+    cargo: {
+        color: '#6b6b6b',
+        fontSize: 17,
+        fontWeight: '700',
+    },
+    nome: {
+        color: color.pink_light,
+        fontSize: 15,
+        fontWeight: '700',
+        marginVertical: 3,
+    },
+    statusBox: {
+        flexDirection: 'row',
+        marginTop: 5,
+    },
+    dot: {
+        fontSize: 27,
+        marginRight: 5,
+        marginTop: -11,
+    },
+    dotAprovado: {
+        color: '#63DE9A',
+    },
+    dotAndamento: {
+        color: '#f7d07a',
+    },
+    dotReprovado: {
+        color: '#F06A47',
+    },
+    status: {
+        color: '#A2A2A2',
+        fontSize: 14,
+        fontWeight: '700',
     },
 })
