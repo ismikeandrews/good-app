@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SafeAreaView, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
-import { Menu } from '../../shared'
+import { IconBox, Menu } from '../../shared'
 
 import styles from './styles'
 
@@ -33,20 +33,16 @@ class ProcessosVaga extends Component{
 
                     <Text style={[ styles.text, styles.title ]}>Requisitos</Text>
                     <View style={ styles.requisitos }>
-                        <View style={ styles.item }>
-                            <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
-                            <Text style={[ styles.text, styles.requisito ]}>Comunicação</Text>
-                        </View>
-                        <View style={ styles.item }>
-                            <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
-                            <Text style={[ styles.text, styles.requisito ]}>Organização</Text>
+                        <View style={ styles.list }>
+                            <IconBox name='Comunicação' img='ijc.png'></IconBox>
+                            <IconBox name='Organização' img='ijc.png'></IconBox>
                         </View>
                     </View>
 
                     <Text style={[ styles.text, styles.title ]}>Benefícios</Text>
                     <View style={ styles.beneficios }>
                         <View style={ styles.item }>
-                            <Text style={[ styles.text, styles.beneficio ]}>Vale Refeiação</Text>
+                            <Text style={[ styles.text, styles.beneficio ]}>Vale Refeição</Text>
                         </View>
                         <View style={ styles.item }>
                             <Text style={[ styles.text, styles.beneficio ]}>Vale Transporte</Text>

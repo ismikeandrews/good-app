@@ -75,6 +75,13 @@ export default StyleSheet.create({
         marginTop: 15,
         textAlign: 'left',
     },
+    list: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+    },
     icon: {
         height: 25,
         marginRight: 10,

@@ -60,6 +60,12 @@ export default StyleSheet.create({
     iconX: {
         marginLeft: 10,
     },
+    list: {
+        alignItems: 'center',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+    },
     btn: {
         alignItems: 'center',
         borderColor: color.dark_red,
