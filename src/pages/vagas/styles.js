@@ -7,7 +7,7 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         paddingBottom: 20,
-        paddingHorizontal: 20,
+        paddingHorizontal: 0,
     },
     text: {
         color: color.pink,
@@ -24,5 +24,8 @@ export default StyleSheet.create({
         color: color.white,
         fontWeight: '700',
         textTransform: 'uppercase',
+    },
+    scrollView: {
+        marginLeft: -10,
     },
 })

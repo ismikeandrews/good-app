@@ -21,7 +21,7 @@ class Vagas extends Component{
 
                 <SafeAreaView style={ styles.slider } >
                     <ScrollView style={ styles.scrollView } horizontal>
-                        <Vaga></Vaga>
+                        <Vaga style={ styles.first } ></Vaga>
                         <Vaga></Vaga>
                         <Vaga></Vaga>
                     </ScrollView>

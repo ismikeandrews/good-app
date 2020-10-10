@@ -16,8 +16,7 @@ export default StyleSheet.create({
         alignItems: 'center',
     },
     logoImg: {
-        height: 230,
-        marginBottom: 30,
+        height: 250,
         width: '100%',
     },
     buttons: {
@@ -39,11 +38,11 @@ export default StyleSheet.create({
         shadowOffset: { width: 3, height: 3, },
         shadowOpacity: 0.3,
         shadowRadius: 4,
-        width: '70%',
+        width: '50%',
     },
     content: {
         backgroundColor: '#fff',
-        borderRadius: 10,
+        borderRadius: 30,
         marginTop: -40,
         paddingVertical: 40,
     },
@@ -67,12 +66,12 @@ export default StyleSheet.create({
         alignItems: 'flex-start',
         flexDirection: 'row',
         marginVertical: 5,
-        marginLeft: 20,
+        marginHorizontal: 20,
     },
     title: {
         color: color.pink,
         fontWeight: '700',
-        marginLeft: 20,
+        marginHorizontal: 20,
         marginTop: 15,
         textAlign: 'left',
     },
