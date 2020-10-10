@@ -7,6 +7,7 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         paddingBottom: 20,
+        paddingHorizontal: 20,
     },
     text: {
         color: color.pink,
