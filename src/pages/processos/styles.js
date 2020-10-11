@@ -62,7 +62,7 @@ export default StyleSheet.create({
     vagaItem: {
         alignItems: 'center',
         backgroundColor: '#fff',
-        borderRadius: 10,
+        borderRadius: 15,
         flexDirection: 'row',
         marginVertical: 10,
         paddingBottom: 10,

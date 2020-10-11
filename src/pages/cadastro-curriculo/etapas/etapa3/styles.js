@@ -18,7 +18,7 @@ export default StyleSheet.create({
     btn: {
         alignItems: 'center',
         borderColor: color.gray,
-        borderRadius: 5,
+        borderRadius: 15,
         borderWidth: 2,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
@@ -43,7 +43,7 @@ export default StyleSheet.create({
     },
     accordion: {
         borderColor: color.gray,
-        borderRadius: 5,
+        borderRadius: 15,
         borderWidth: 1,
         marginTop: 20,
     },

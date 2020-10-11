@@ -54,7 +54,6 @@ export default StyleSheet.create({
     },
     btn: {
         backgroundColor: color.pink_light,
-        paddingVertical: 12,
         width: '48%',
     },
     dwl: {

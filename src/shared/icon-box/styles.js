@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native'
 import color from '../../assets/utils/colors'
 
 export default StyleSheet.create({
-    checkbox: {
+    box: {
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 15,
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     item: {
         alignItems: 'center',
         borderColor: color.gray,
-        borderRadius: 5,
+        borderRadius: 15,
         borderWidth: 3,
         paddingBottom: 10,
         paddingTop: 20,

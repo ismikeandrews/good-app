@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { SafeAreaView, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
-import { DescriptionBox, IconBox, Menu } from '../../shared/'
+import { DescriptionBox, IconBox, Formacao, Menu } from '../../shared/'
 
 import variables from '../../shared/variables/styles'
 import styles from './styles'
@@ -9,7 +9,7 @@ class Curriculo extends Component{
     render(){
         return(
             <View style={ styles.container }>
-                {/* <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
+                <Image style={ styles.icon } source={require('../../assets/images/ijc.png')} />
 
                 <Text style={ styles.empty }>Cadastre um currículo para continuar</Text>
 
@@ -17,10 +17,9 @@ class Curriculo extends Component{
                 onPress={() => this.props.navigation.navigate('CadastroCurriculo')}>
                     <Text style={[ variables.btnText, styles.btnText ]}>Cadastrar</Text>
                 </TouchableOpacity>
-                
-                <Menu/> */}
+               
 
-                <SafeAreaView style={ styles.container }>
+                {/* <SafeAreaView style={ styles.container }>
                     <ScrollView style={ styles.scrollView }>
                         <View style={ styles.header }>
                             <Text style={[ styles.text, styles.title ]}>Meu currículo</Text>
@@ -32,6 +31,9 @@ class Curriculo extends Component{
                         <View style={[ styles.item, styles.requisitos ]}>
                             <Text style={[ styles.text, styles.topic ]}>Requisitos</Text>
                             <Text style={[ styles.text, styles.desc ]}>Minhas formações básicas em...</Text>
+
+                            <Formacao img='ijc.png' title='Escolaridade' value='Ensino superior completo'></Formacao>
+                            <Formacao img='ijc.png' title='Alfabetização' value='Alfabetizado'></Formacao>
                         </View>
 
                         <View style={[ styles.item, styles.habilidades ]}>
@@ -60,15 +62,15 @@ class Curriculo extends Component{
                         <View style={ styles.list }>
                             <TouchableOpacity style={[ variables.btn, styles.btn, styles.dwl ]}
                             onPress={() => console.log('clicked')}>
-                                <Text style={ styles.btnText }>Download</Text>
+                                <Text style={[ variables.btnText, styles.btnText ]}>Download</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={[ variables.btn, styles.btn ]}
                             onPress={() => console.log('clicked')}>
-                                <Text style={ styles.btnText }>Editar</Text>
+                                <Text style={[ variables.btnText, styles.btnText ]}>Editar</Text>
                             </TouchableOpacity>
                         </View>
                     </ScrollView>
-                </SafeAreaView>
+                </SafeAreaView> */}
 
                 <Menu/>
             </View>
