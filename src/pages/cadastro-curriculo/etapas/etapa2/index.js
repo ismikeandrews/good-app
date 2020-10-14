@@ -24,7 +24,7 @@ class Etapa2 extends React.Component {
                             <Text style={ styles.label }>{this.state.school}</Text>
                     </View>
                 </TouchableOpacity>
-                {this.state.active === true ?
+                {this.state.active === true &&
                     <View style={ styles.list }>
                         <View style={ styles.listContent }>
                             <TouchableOpacity style={ styles.item } onPress={() => { this.setState({ school: 'Ensino Médio' }), this.setState({ active: false })}}>
@@ -38,8 +38,6 @@ class Etapa2 extends React.Component {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    :
-                    null
                 }
             </View>
         )

@@ -73,6 +73,7 @@ export default StyleSheet.create({
         borderWidth: 1,
         flexDirection: 'row',
         justifyContent: 'center',
+        marginBottom: 50,
         marginTop: 20,
         paddingHorizontal: 20,
         paddingVertical: 10,

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SafeAreaView, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
-import { IconBox, Menu } from '../../shared'
+import { Help, IconBox, Menu } from '../../shared'
 
 import styles from './styles'
 
@@ -56,6 +56,7 @@ class ProcessosVaga extends Component{
                     </TouchableOpacity>
                 </ScrollView>
 
+                <Help />
                 <Menu/>
             </SafeAreaView>
         )

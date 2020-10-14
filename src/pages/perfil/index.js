@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import { SafeAreaView, ScrollView, View, Text, Image, TouchableOpacity } from 'react-native'
-
+import { Help, Menu } from '../../shared'
 import variables from '../../shared/variables/styles'
 import styles from './styles'
 
@@ -93,6 +93,9 @@ class Perfil extends Component{
                         </View>
                     </ScrollView>
                 </SafeAreaView>
+                
+                <Help />
+                <Menu />
             </View>
         )
     }

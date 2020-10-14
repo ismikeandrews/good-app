@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { SafeAreaView, ScrollView, View, } from 'react-native'
-import { Menu, Vaga } from '../../shared/'
+import { SafeAreaView, ScrollView, View, Text, TouchableOpacity } from 'react-native'
+import { Help, Menu, Vaga } from '../../shared/'
 
 import variables from '../../shared/variables/styles'
 import styles from './styles'
@@ -27,6 +27,7 @@ class Vagas extends Component{
                     </ScrollView>
                 </SafeAreaView>
 
+                <Help/>
                 <Menu/>
             </View>
         )

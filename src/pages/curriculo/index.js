@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { SafeAreaView, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
-import { DescriptionBox, IconBox, Formacao, Menu } from '../../shared/'
+import { DescriptionBox, IconBox, Formacao, Menu, Help } from '../../shared/'
 
 import variables from '../../shared/variables/styles'
 import styles from './styles'
@@ -59,7 +59,7 @@ class Curriculo extends Component{
                             </View>
                         </View>
 
-                        <View style={ styles.list }>
+                        <View style={[ styles.list, styles.last ]}>
                             <TouchableOpacity style={[ variables.btn, styles.btn, styles.dwl ]}
                             onPress={() => console.log('clicked')}>
                                 <Text style={[ variables.btnText, styles.btnText ]}>Download</Text>
@@ -72,6 +72,7 @@ class Curriculo extends Component{
                     </ScrollView>
                 </SafeAreaView> */}
 
+                <Help/>
                 <Menu/>
             </View>
         )

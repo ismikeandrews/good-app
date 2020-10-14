@@ -52,6 +52,9 @@ export default StyleSheet.create({
         flexWrap: 'wrap',
         justifyContent: 'space-between',
     },
+    last: {
+        marginBottom: 70,
+    },
     btn: {
         backgroundColor: color.pink_light,
         width: '48%',

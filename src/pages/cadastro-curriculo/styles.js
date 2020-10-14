@@ -9,13 +9,13 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         marginTop: Constants.statusBarHeight+50,
-        paddingBottom: Constants.statusBarHeight+50,
+        paddingBottom: Constants.statusBarHeight+20,
         paddingHorizontal: 20,
     },
     contentBtn: {
         flexDirection: 'row-reverse',
         justifyContent: 'space-between',
-        marginBottom: 30,
+        marginBottom: 100,
     },
     btn: {
         width: '48%',

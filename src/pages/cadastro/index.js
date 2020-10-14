@@ -48,11 +48,10 @@ class Cadastro extends Component{
                             <Text style={[ variables.btnText, styles.btnText ]}>Próximo</Text>
                         </TouchableOpacity>
                     }
-                    {this.state.page > 0 ? 
+                    {this.state.page > 0 && 
                         <TouchableOpacity style={[ variables.btn, styles.btn, styles.btnPrev ]} onPress={() => this.setState({page: this.state.page - 1})}>
                             <Text style={[ variables.btnText, styles.btnText ]}>Voltar</Text>
-                        </TouchableOpacity> :
-                        null
+                        </TouchableOpacity>
                     }
                 </View>
             </View>

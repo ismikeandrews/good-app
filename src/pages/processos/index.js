@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SafeAreaView, ScrollView, View, Image, Text, TouchableOpacity } from 'react-native'
-import { Menu } from '../../shared'
+import { Help, Menu } from '../../shared'
 
 import variables from '../../shared/variables/styles'
 import styles from './styles'
@@ -90,6 +90,7 @@ class Processos extends Component{
 
                     </ScrollView>
 
+                    <Help />
                     <Menu/>
                 </SafeAreaView>
             </View>

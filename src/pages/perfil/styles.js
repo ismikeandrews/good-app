@@ -3,14 +3,20 @@ import color from '../../assets/utils/colors'
 import font from '../../assets/utils/fonts'
 
 export default StyleSheet.create({
+    scrollView: {
+        marginBottom: 80,
+    },
     imgBorder: {
         alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 15,
     },
     img: {
-        height: 72,
-        marginTop: 30,
-        marginBottom: 45,
-        width: 100,
+        borderColor: color.pink_light,
+        borderRadius: 100,
+        borderWidth: 3,
+        height: 140,
+        width: 140,
     },
     name: {
         color: color.pink,

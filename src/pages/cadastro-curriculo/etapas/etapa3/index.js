@@ -62,15 +62,13 @@ class Etapa3 extends React.Component {
                     </TouchableOpacity>
                 </View>
                 
-                { this.state.yes === true ?
+                { this.state.yes === true &&
                     <View>
                         {this.state.new.map(teste => teste)}
                         <TouchableOpacity style={ styles.accordion } onPress={() => this.newAccordion()}>
                             <Text style={[ styles.accordionTitle, styles.newTitle ]}>+</Text>
                         </TouchableOpacity>
                     </View>
-                :
-                    null
                 }
             </View>
         )
